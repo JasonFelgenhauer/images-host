@@ -1,0 +1,358 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: #0F0E0E;
+  color: #6979F8;
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  color: #6979F8;
+  text-decoration: none;
+}
+a:visited {
+  color: #6979F8;
+}
+
+li {
+  list-style-type: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 2000px;
+  margin: 0 auto;
+}
+
+.error {
+  height: 90vh;
+  flex-direction: column;
+}
+.error h1 {
+  text-transform: uppercase;
+  font-size: 5em;
+  letter-spacing: 3px;
+}
+.error a {
+  font-size: 2em;
+  border-bottom: 3px #6979F8 solid;
+  padding-bottom: 5px;
+  margin-top: 100px;
+  transition: all 0.3s;
+}
+.error a:hover {
+  border-color: #0F0E0E;
+}
+
+.nav {
+  justify-content: space-around;
+  height: 10vh;
+}
+.nav_left a {
+  font-size: 2em;
+  text-transform: uppercase;
+  transition: all 0.3s;
+}
+.nav_left a:hover {
+  transform: scale(1.1);
+}
+.nav_right ul li {
+  display: inline;
+  margin: 0 10px;
+}
+.nav_right ul li a {
+  font-size: 1.2em;
+  border: 2px #0F0E0E solid;
+  border-radius: 7px;
+  padding: 10px;
+  transition: all 0.3s;
+}
+.nav_right ul li a:hover {
+  border-color: #6979F8;
+}
+.nav_right #burger_menu {
+  background: none;
+  border: none;
+  font-size: 3em;
+  color: #6979F8;
+  cursor: pointer;
+  display: none;
+}
+@media (max-width: 700px) {
+  .nav_right ul {
+    position: fixed;
+    top: -100%;
+    left: 25%;
+    width: 50%;
+    background: #6979F8;
+    text-align: center;
+    border-radius: 3px;
+  }
+  .nav_right ul li {
+    display: block;
+    margin: 25px 0;
+  }
+  .nav_right ul li a {
+    border: 2px #6979F8 solid;
+    color: #0F0E0E;
+  }
+  .nav_right ul li a:hover {
+    border-color: #0F0E0E;
+  }
+  .nav_right #burger_menu {
+    display: block;
+  }
+}
+
+.header {
+  justify-content: space-between;
+  height: 90vh;
+}
+.header_left {
+  width: 60%;
+  text-align: center;
+}
+.header_left h1 {
+  font-size: 3em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.header_left h3 {
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  margin-bottom: 50px;
+}
+.header_left a {
+  background: #FFCF5C;
+  padding: 10px 50px;
+  border-radius: 3px;
+  color: #0F0E0E;
+  text-transform: uppercase;
+  border: 2px #FFCF5C solid;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.header_left a:hover {
+  background: transparent;
+  color: #FFCF5C;
+}
+.header_right {
+  width: 40%;
+}
+.header_right img {
+  width: 75%;
+  height: auto;
+}
+@media (max-width: 1050px) {
+  .header {
+    flex-direction: column-reverse;
+    justify-content: center;
+  }
+  .header_left {
+    width: 100%;
+  }
+  .header_right {
+    width: 35%;
+  }
+  .header_right img {
+    width: 100%;
+  }
+}
+@media (max-width: 700px) {
+  .header_right {
+    width: 55%;
+  }
+}
+@media (max-width: 550px) {
+  .header_left h1 {
+    font-size: 2em;
+  }
+  .header_left h3 {
+    font-size: 1em;
+  }
+}
+
+.login {
+  flex-direction: column;
+  min-height: 90vh;
+}
+.login h2 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+.login form {
+  width: 50%;
+  margin-bottom: 100px;
+}
+.login form input {
+  width: 100%;
+  background: transparent;
+  border: 3px #FFCF5C solid;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px 0;
+  outline: none;
+  color: #6979F8;
+  font-weight: 700;
+  transition: all 0.3s;
+}
+.login form input::placeholder {
+  color: #6979F8;
+}
+.login form input:hover {
+  background: #6979F8;
+  color: #0F0E0E;
+}
+.login form input:hover::placeholder {
+  color: #0F0E0E;
+}
+.login form input[type=submit] {
+  text-transform: uppercase;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+.login a {
+  transition: all 0.3s;
+  border-bottom: 2px #0F0E0E solid;
+  padding-bottom: 5px;
+}
+.login a:hover {
+  border-color: #6979F8;
+}
+@media (max-width: 600px) {
+  .login form {
+    width: 75%;
+  }
+}
+@media (max-width: 400px) {
+  .login form {
+    width: 90%;
+  }
+}
+
+#host {
+  margin-top: -150px;
+}
+#host .host {
+  height: 90vh;
+}
+#host .host form {
+  border: 2px #FFCF5C solid;
+  background: #6979F8;
+  border-radius: 9px;
+  box-shadow: 0 0 8px 1px #6979F8;
+  padding: 50px;
+}
+#host .host form input {
+  background: #0F0E0E;
+  color: #FFCF5C;
+  width: 100%;
+  padding: 10px 0 10px 10px;
+  border: none;
+  margin-top: 20px;
+  font-size: 1.2em;
+  border-radius: 9px;
+  box-shadow: 0 0 8px 1px #0F0E0E;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#host .host form input:hover, #host .host form input:focus {
+  background: none;
+  color: #0F0E0E;
+}
+#host .host form input:active {
+  box-shadow: 0 0 8px 6px #0F0E0E;
+}
+#host .host form .f {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+  text-align: center;
+}
+#host .host form label {
+  background: #0F0E0E;
+  color: #FFCF5C;
+  width: 100%;
+  border: none;
+  margin-top: 20px;
+  font-size: 1.2em;
+  border-radius: 9px;
+  box-shadow: 0 0 8px 1px #0F0E0E;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 10px 40px;
+}
+#host .host form label:hover, #host .host form label:focus {
+  background: none;
+  color: #0F0E0E;
+}
+#host .host form label:active {
+  box-shadow: 0 0 8px 6px #0F0E0E;
+}
+@media (max-width: 300px) {
+  #host .host form input {
+    font-size: 0.8em;
+  }
+  #host .host form label {
+    font-size: 0.8em;
+  }
+}
+
+.account {
+  flex-wrap: wrap;
+  gap: 50px;
+  margin-top: 200px;
+}
+.account_card {
+  overflow: hidden;
+  transition: all 0.3s;
+}
+.account_card_top img {
+  width: 100%;
+  height: 300px;
+  transition: all 0.3s;
+}
+@media (max-width: 1000px) {
+  .account_card_top img {
+    height: 150px;
+  }
+}
+.account_card_bottom {
+  display: flex;
+  gap: 10px;
+}
+.account_card_bottom a {
+  background: #FFCF5C;
+  color: #6979F8;
+  padding: 10px 20px;
+  width: 100%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  border: 2px #FFCF5C solid;
+  transition: all 0.3s;
+}
+.account_card_bottom a:hover {
+  background: none;
+}
+.account_card:hover {
+  transform: scale(1.2);
+}
+.account_card:hover img {
+  border-radius: 25% 25% 0 0;
+}
+
+/*# sourceMappingURL=index.css.map */

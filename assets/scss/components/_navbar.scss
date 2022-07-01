@@ -1,0 +1,67 @@
+.nav{
+    justify-content: space-around;
+    height: 10vh;
+    &_left{
+        a{
+            font-size: 2em;
+            text-transform: uppercase;
+            transition: all 0.3s;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    &_right{
+        ul{
+            li{
+                display: inline;
+                margin: 0 10px;
+                a{
+                    font-size: 1.2em;
+                    border: 2px $color_1 solid;
+                    border-radius: 7px;
+                    padding: 10px;
+                    transition: all 0.3s;
+                    &:hover{
+                        border-color: $color_2;
+                    }
+                }
+            }
+        }
+        #burger_menu{
+            background: none;
+            border: none;
+            font-size: 3em;
+            color: $color_2;
+            cursor: pointer;
+            display: none;
+        }
+    }
+    @media(max-width: 700px){
+        &_right{
+            ul{
+                position: fixed;
+                top: -100%;
+                left: 25%;
+                width: 50%;
+                background: $color_2;
+                text-align: center;
+                border-radius: 3px;
+                li{
+                    display: block;
+                    margin: 25px 0;
+                    a{
+                        border: 2px $color_2 solid;
+                        color: $color_1;
+                        &:hover{
+                            border-color: $color_1;
+                        }
+                    }
+                }
+            }
+            #burger_menu{
+                display: block;
+            }
+        }
+    }
+}

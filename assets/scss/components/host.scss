@@ -1,0 +1,76 @@
+#host{
+    margin-top: -150px;
+    .host{
+        height: 90vh;
+        form{
+            border: 2px $color_3 solid;
+            background: $color_2;
+            border-radius: 9px;
+            box-shadow: 0 0 8px 1px $color_2;
+            padding: 50px;
+            input{
+                background: $color_1;
+                color: $color_3;
+                width: 100%;
+                padding: 10px 0 10px 10px;
+                border: none;
+                margin-top: 20px;
+                font-size: 1.2em;
+                border-radius: 9px;
+                box-shadow: 0 0 8px 1px $color_1;
+                cursor: pointer;
+                transition: all 0.3s;
+                &:hover,
+                &:focus{
+                    background: none;
+                    color: $color_1
+                }
+                &:active{
+                    box-shadow: 0 0 8px 6px $color_1;
+                }
+            }
+            .f{
+                width: 0.1px;
+                height: 0.1px;
+                opacity: 0;
+                overflow: hidden;
+                position: absolute;
+                z-index: -1;
+                text-align: center;
+            }
+            label{
+                background: $color_1;
+                color: $color_3;
+                width: 100%;
+                border: none;
+                margin-top: 20px;
+                font-size: 1.2em;
+                border-radius: 9px;
+                box-shadow: 0 0 8px 1px $color_1;
+                cursor: pointer;
+                transition: all 0.3s;
+                padding: 10px 40px;
+                &:hover,
+                &:focus{
+                    background: none;
+                    color: $color_1;
+                }
+                &:active{
+                    box-shadow: 0 0 8px 6px $color_1;
+                }
+            }
+        }
+    }
+    @media(max-width: 300px){
+        .host{
+            form{
+                input{
+                    font-size: 0.8em;
+                }
+                label{
+                    font-size: 0.8em;
+                }
+            }
+        }
+    }
+}

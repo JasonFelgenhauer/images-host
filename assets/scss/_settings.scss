@@ -1,0 +1,44 @@
+// Font
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
+
+// Variable
+
+$color_1: #0F0E0E;
+$color_2: #6979F8;
+$color_3: #FFCF5C;
+
+$font: 'Roboto', sans-serif;
+// Reset
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    background: $color_1;
+    color: $color_2;
+    font-family: $font;
+}
+a{
+    color: $color_2;
+    text-decoration: none;
+    &:visited{
+        color: $color_2;
+    }
+}
+li{
+    list-style-type: none;
+}
+
+// General
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 2000px;
+    margin: 0 auto;
+}
